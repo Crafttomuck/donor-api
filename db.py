@@ -1,6 +1,19 @@
 import mariadb
 import os
 
+FETCH_PERMS = (
+    "SELECT "
+    "uuid, permission "
+    "FROM "
+    "luckperms_user_permissions "
+    "WHERE "
+    "permission in ('group.donort0', 'group.donort1', 'group.donort2', 'group.donort3');"
+)
+
+FETCH_NAMES = "SELECT name, uuid FROM donor_api_names;"
+
+INSERT_NAMES = "INSERT INTO donor_api_names (uuid, name) VALUES (?, ?);"
+
 
 class DB:
     def __init__(self):
