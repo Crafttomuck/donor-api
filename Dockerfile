@@ -28,4 +28,4 @@ ENV PATH="/app/.venv/bin:$PATH"
 
 ENTRYPOINT []
 
-CMD ["gunicorn", "--workers=4", "--log-level=debug", "main:app"]
+CMD ["gunicorn", "--workers=4", "--log-level=info", "main:app"]
